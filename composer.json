@@ -1,7 +1,7 @@
 {
     "name": "inspirapuntodo/hubspot-for-laravel",
     "description": "Hubspot for Laravel allows you to interact with the official hubspot PHP Api Client",
-    "keywords": ["laravel, php, sdk, hubspot, api"],
+    "keywords": ["laravel", "php", "sdk", "hubspot", "api"],
     "license": "MIT",
     "autoload": {
         "psr-4": {
