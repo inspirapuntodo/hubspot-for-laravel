@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace InspiraPuntoDo\Hubspot;
+namespace InspiraPuntoDo\Hubspot\Exceptions;
 
 use InvalidArgumentException;
 

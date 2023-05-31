@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace InspiraPuntoDo\Hubspot;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
-use hubspot\Client;
+use InspiraPuntoDo\Hubspot\Exceptions\ApiKeyIsMissing;
 use SevenShores\Hubspot\Factory;
 
 /**
