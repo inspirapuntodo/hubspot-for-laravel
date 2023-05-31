@@ -27,6 +27,13 @@
         "phpstan/phpstan": "^1.9.4",
         "symfony/var-dumper": "^6.2.2"
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "InspiraPuntoDo\\Hubspot\\ServiceProvider"
+            ]
+        }
+    },
     "prefer-stable": true,
     "config": {
         "sort-packages": true,
