@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace InspiraPuntoDo\Hubspot;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
-use InspiraPuntoDo\Hubspot\Exceptions\ApiKeyIsMissing;
+use InspiraPuntoDo\Hubspot\Exceptions\AccessTokenIsMissing;
 use SevenShores\Hubspot\Factory;
 
 /**
@@ -23,7 +23,7 @@ final class ServiceProvider extends BaseServiceProvider
             $use_oauth2 = config('hubspot.use_oauth2');
 
             if (! is_string($access_token)) {
-                throw ApiKeyIsMissing::create();
+                throw AccessTokenIsMissing::create();
             }
 
             return new Factory(
