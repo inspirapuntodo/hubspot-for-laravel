@@ -6,6 +6,7 @@ namespace InspiraPuntoDo\Hubspot;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 use InspiraPuntoDo\Hubspot\Exceptions\AccessTokenIsMissing;
+use InspiraPuntoDo\Hubspot\Exceptions\ClientOptionsMustBeAnArray;
 use SevenShores\Hubspot\Factory;
 
 /**
@@ -26,13 +27,19 @@ final class ServiceProvider extends BaseServiceProvider
                 throw AccessTokenIsMissing::create();
             }
 
+            $client_options = config('hubspot.client_options', []);
+
+            if (! is_array($client_options)) {
+                throw ClientOptionsMustBeAnArray::create();
+            }
+
             return new Factory(
                 [
                     'key' => $access_token,
                     'oauth2' => $use_oauth2,
                 ],
                 null,
-                config('hubspot.client_options', [])
+                $client_options
             );
         });
 
