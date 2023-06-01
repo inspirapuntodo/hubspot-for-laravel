@@ -11,7 +11,7 @@ return [
     */
 
     'access_token' => env('HUBSPOT_ACCESS_TOKEN'),
-    'use_oauth2' => env('HUBSPOT_USE_OAUTH2', false),
+    'use_oauth2' => env('HUBSPOT_USE_OAUTH2', true),
 
     /*
     |--------------------------------------------------------------------------
