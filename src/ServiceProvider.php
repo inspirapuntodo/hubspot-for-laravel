@@ -65,6 +65,7 @@ final class ServiceProvider extends BaseServiceProvider
     {
         return [
             Factory::class,
+            'hubspot',
         ];
     }
 }
